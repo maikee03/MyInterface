@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-income = st.slider("Monthly Income", 0, 6000, 2000) #changed 5000 to 6000
+income = st.slider("Monthly Income", 0, 7000, 2000) #changed 5000 to 6000
 rent = st.slider("Rent", 0, 2000, 800)
 groceries = st.slider("Groceries", 0, 1000, 250)
 transport = st.slider("Transport", 0, 500, 60)
