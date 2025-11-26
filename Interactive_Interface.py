@@ -3,18 +3,18 @@ import pandas as pd
 import plotly.express as px
 
 income = st.slider("Monthly Income", 0, 7000, 2000) #changed 5000 to 6000
-rent = st.slider("Rent", 0, 2000, 800)
-groceries = st.slider("Groceries", 0, 1000, 250)
-transport = st.slider("Transport", 0, 500, 60)
+rent = st.slider("Projekte", 0, 2000, 800)
+groceries = st.slider("Verwaltung", 0, 1000, 250)
+transport = st.slider("Werbung", 0, 500, 60)
 
 expenses = rent + groceries + transport
 savings = income - expenses
 
-st.metric("Total Expenses", expenses)
-st.metric("Savings", savings)
+st.metric("Ausgaben", expenses)
+st.metric("Ersparnisse", savings)
 
 df = pd.DataFrame({
-    "Category": ["Rent", "Groceries", "Transport", "Savings"],
+    "Category": ["Projekte", "Verwaltung", "Werbung", "Ersparnisse"],
     "Amount": [rent, groceries, transport, savings]
 })
 fig = px.pie(df, names='Category', values='Amount', title="Monthly Budget")
