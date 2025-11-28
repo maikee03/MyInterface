@@ -1,3 +1,6 @@
+st.set_page_config(layout="wide")
+
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -30,7 +33,7 @@ with col2:
     
     Gesamte_Ausgaben = Projekte + Verwaltung + Werbung
     st.metric("Gesamte Ausgaben", Gesamte_Ausgaben)
-    
+
 Ersparnisse = Gesamtes_Einkommen - Gesamte_Ausgaben
 df = pd.DataFrame({
     "Category": ["Projekte", "Verwaltung", "Werbung", "Ersparnisse"],
