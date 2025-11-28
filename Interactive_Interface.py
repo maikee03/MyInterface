@@ -20,8 +20,11 @@ Ersparnisse = Gesamtes_Einkommen - Gesamte_Ausgaben
 
 ################# Output #################
 st.header("Jahres Bilanz")
-st.metric("Gesamte Ausgaben", Gesamte_Ausgaben) #st.metric gives as a nice formatted output of Label and Value
-#st.metric("Ersparnisse", Ersparnisse)
+col1, col2 = st.columns(2)
+with col1:
+    st.metric("Gesamtes Einkommen", Gesamtes_Einkommen)
+with col2:
+    st.metric("Gesamte Ausgaben", Gesamte_Ausgaben)
 
 df = pd.DataFrame({
     "Category": ["Projekte", "Verwaltung", "Werbung", "Ersparnisse"],
