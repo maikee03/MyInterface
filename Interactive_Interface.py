@@ -14,7 +14,7 @@ col1, col2 = st.columns(2)
 with col1:
     st.header("Einnahmen")
     ## Interaktive Slider für Einnahmen
-    Gesamtes_Einkommen = st.slider("Gesamte Einnahmen", 0, 5000, 2000)
+    Gesamtes_Einkommen = st.slider("Gesamte Einnahmen", 0, 10000, 2000)
 
     st.metric("Gesamtes Einkommen", Gesamtes_Einkommen)
 
@@ -23,8 +23,8 @@ with col2:
     st.header("Ausgaben")
     ## Interaktive Slider für Ausgaben
     Projekte = st.slider(f"🟦 Projekte", 0, 3000, 800)
-    Verwaltung = st.slider(f"🟧 Verwaltung", 0, 1000, 350)
-    Werbung = st.slider(f"🟩 Werbung", 0, 500, 60)
+    Verwaltung = st.slider(f"🟧 Verwaltung", 0, 3000, 350)
+    Werbung = st.slider(f"🟩 Werbung", 0, 3000, 60)
     
     col1, col2 = st.columns(2)
     with col1:
