@@ -4,7 +4,7 @@ import plotly.express as px
 
 income = st.slider("Monthly Income", 0, 7000, 2000) #changed 5000 to 6000
 rent = st.slider("Projekte", 0, 2000, 800)
-groceries = st.slider("Verwaltung", 0, 1000, 250)
+groceries = st.slider("Verwaltung", 0, 1000, 350)
 transport = st.slider("Werbung", 0, 500, 60)
 
 expenses = rent + groceries + transport
