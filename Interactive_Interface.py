@@ -25,11 +25,11 @@ with col2:
     
     col1, col2 = st.columns(2)
     with col1:
-    Gesamte_Ausgaben = Projekte + Verwaltung + Werbung
-    st.metric("Gesamte Ausgaben", Gesamte_Ausgaben)
+        Gesamte_Ausgaben = Projekte + Verwaltung + Werbung
+        st.metric("Gesamte Ausgaben", Gesamte_Ausgaben)
     with col2:
-    Ersparnisse = Gesamtes_Einkommen - Gesamte_Ausgaben
-    st.metric("Ersparnisse/Nicht Ausgegeben", Ersparnisse)
+        Ersparnisse = Gesamtes_Einkommen - Gesamte_Ausgaben
+        st.metric("Ersparnisse/Nicht Ausgegeben", Ersparnisse)
 
     ## Visualisierung der Ausgaben
     df = pd.DataFrame({
