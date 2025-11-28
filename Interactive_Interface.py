@@ -36,5 +36,7 @@ with col2:
         "Category": ["Projekte", "Verwaltung", "Werbung"],
         "Amount": [Projekte, Verwaltung, Werbung]
     })
-    fig = px.pie(df, names='Category', values='Amount', title="Anteile Ausgaben",fontsize=20)
+    fig = px.pie(df, names='Category', values='Amount', title="Anteile Ausgaben")
+    fig.update_layout(title_font_size=24, title_font_color="black",font=dict(size=18, color="black"))
+    fig.update_traces(marker=dict(colors= ['#636EFA', '#EF553B', '#00CC96'], line=dict(color='#000000', width=2)))
     st.plotly_chart(fig)
